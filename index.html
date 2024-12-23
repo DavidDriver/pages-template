@@ -76,14 +76,14 @@
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      background-color: #e0e0e0;
+      overflow: hidden;
       margin: 20px auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: #888;
-      border: 2px solid #ccc;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     h1 {
@@ -133,22 +133,21 @@
   </header>
 
   <div class="container">
-    <div class="profile-pic">Your Picture</div>
+    <div class="profile-pic">
+      <img src="headshot.jpeg" alt="David Driver">
+    </div>
     <h1>David Driver</h1>
     <p>Welcome to my personal website. Learn more about me on LinkedIn.</p>
     <div id="about" class="about">
       <h2>About</h2>
       <p>
-        I'm a highly experienced software developer and technical project lead with a broad foundation in mainframe environments (z/OS, MVS/TSO) and extensive expertise in legacy languages like COBOL and CICS, as well as modern web technologies, RESTful APIs, and XML integration. Over my career, I’ve led teams through complex systems integrations, large-scale data conversions, and seamless migration of essential business applications, including HR, payroll, benefits, and manufacturing systems, to platforms such as PeopleSoft and SAP.
+        I’m an experienced developer moving my focus from mainframe environments to modern internet and web technologies. These days, I enjoy exploring front-end and back-end development, creating user-friendly web applications, and diving into new frameworks and tools. 
       </p>
       <p>
-        With a strong background in both technical and functional roles, I specialize in aligning legacy systems with today’s advanced technological standards. My recent experience includes production support for pension administration, building automated reporting tools, and implementing security compliance measures in high-stakes environments.
+        Outside of tech, I’ve got a range of interests, from photography and music to experimenting in the kitchen. Feel free to check out the navigation bar above to find out more about my consulting services, recipes, and creative projects.
       </p>
       <p>
-        Additionally, I bring skills in audio and video production, as a certified Avid editor and sound mixer. This creative background complements my analytical expertise and adds versatility to the projects I can support.
-      </p>
-      <p>
-        While I’m enjoying retirement, I'm open to interesting part-time or contract roles where I can bring value through my diverse skill set and mentoring capabilities. If you're looking for someone who can bridge the gap between traditional systems and emerging tech, let's connect!
+        Whether you’re here to connect professionally or just curious about my work, welcome! Let’s create something great.
       </p>
     </div>
     <a href="https://www.linkedin.com/in/david-driver-6ab8015/" target="_blank">Visit My LinkedIn Profile</a>
