@@ -11,13 +11,56 @@
       padding: 0;
       background-color: #f3f2ef;
       color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
     }
 
+    /* Navigation bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0073b1;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .navbar .menu {
+      display: flex;
+      gap: 15px;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #005582;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 150px;
+        padding: 10px;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+    }
+
+    /* Page content */
     .container {
       text-align: center;
       background-color: #fff;
@@ -25,6 +68,7 @@
       padding: 20px;
       width: 90%;
       max-width: 600px;
+      margin: 60px auto;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
@@ -77,11 +121,22 @@
   </style>
 </head>
 <body>
+  <header class="navbar">
+    <div>David Driver</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/david-driver-6ab8015/" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
   <div class="container">
     <div class="profile-pic">Your Picture</div>
     <h1>David Driver</h1>
     <p>Welcome to my personal website. Learn more about me on LinkedIn.</p>
-    <div class="about">
+    <div id="about" class="about">
       <h2>About</h2>
       <p>
         I'm a highly experienced software developer and technical project lead with a broad foundation in mainframe environments (z/OS, MVS/TSO) and extensive expertise in legacy languages like COBOL and CICS, as well as modern web technologies, RESTful APIs, and XML integration. Over my career, I’ve led teams through complex systems integrations, large-scale data conversions, and seamless migration of essential business applications, including HR, payroll, benefits, and manufacturing systems, to platforms such as PeopleSoft and SAP.
@@ -98,5 +153,11 @@
     </div>
     <a href="https://www.linkedin.com/in/david-driver-6ab8015/" target="_blank">Visit My LinkedIn Profile</a>
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector(".menu").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
